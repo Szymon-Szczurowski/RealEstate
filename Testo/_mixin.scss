@@ -1,0 +1,9 @@
+@import '../sass/colors';
+
+@mixin img ($photo) {
+    background: $linear, url($photo);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}

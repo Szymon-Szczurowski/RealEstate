@@ -1,0 +1,141 @@
+.white-block {
+  position: absolute;
+  height: 40px;
+  width: 60%;
+  background-color: #fff;
+}
+.white-block-left {
+  bottom: 0;
+  left: -50px;
+  transform: skew(45deg);
+}
+.white-block-right {
+  top: 0;
+  right: -50px;
+  transform: skew(45deg);
+}
+
+.btn-special-animation {
+  position: relative;
+  transition: background-color 0.3s;
+  overflow: hidden;
+  z-index: 0;
+}
+.btn-special-animation::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+.btn-special-animation:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+.burger-btn:focus {
+  border: 1px solid #fff;
+}
+.burger-btn:hover .burger-btn__bars::after,
+.burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+.burger-btn__box {
+  position: relative;
+  height: 30px;
+  width: 40px;
+}
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+.burger-btn__bars {
+  width: 100%;
+}
+.burger-btn__bars::after {
+  top: 13px;
+  width: 60%;
+}
+.burger-btn__bars::before {
+  top: 27px;
+  width: 30%;
+  transition-delay: 0.1s;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  height: 75vh;
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(45deg, rgba(76, 86, 102, 0.75), rgba(68, 62, 97, 0.75)), url("../img/small-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header__heading {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.header__text {
+  margin-top: 0.1em;
+  font-size: 1.5rem;
+}
+.header__btn {
+  margin-top: 1.5em;
+  padding: 1em;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: transform 0.3s;
+}
+.header__btn:hover {
+  transform: scale(1.1);
+}
+.header__btn::before {
+  background-color: rgba(238, 238, 238, 0.13);
+}/*# sourceMappingURL=style.css.map */

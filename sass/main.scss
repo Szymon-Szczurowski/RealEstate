@@ -77,6 +77,23 @@ body {
 
 // BURGER
 
+// NAV
+
+.nav{
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: blue;
+	z-index: 100;
+}
+
+
+//NAV
+
 // HEADER
 
 .header {
